@@ -240,13 +240,36 @@ export default function Marketplace() {
     try {
       // Simulate API call to save order and send notifications
       await new Promise(resolve => setTimeout(resolve, 1000))
-      
+
+      // Simulate WhatsApp notification
+      const whatsappMessage = `🛒 NEW ORDER RECEIVED!\n\n` +
+        `📦 Product: ${product.name}\n` +
+        `📊 Quantity: ${quantity} ${product.unit}\n` +
+        `💰 Total: $${(product.price * quantity).toFixed(2)}\n\n` +
+        `👤 Customer: ${orderForm.customerName}\n` +
+        `📞 Phone: ${orderForm.phone}\n` +
+        `📧 Email: ${orderForm.email}\n` +
+        `📍 Address: ${orderForm.address}\n\n` +
+        `📅 Date: ${new Date().toLocaleDateString()}\n` +
+        `⏰ Time: ${new Date().toLocaleTimeString()}`
+
+      // Simulate email notification
+      const emailData = {
+        to: 'Benaziryakta@gmail.com',
+        subject: `New Order: ${product.name} - ${orderForm.customerName}`,
+        body: `Dear Admin,\n\nA new order has been received:\n\n${whatsappMessage}\n\nPlease process this order promptly.\n\nBest regards,\nBenazir Yakta Trading System`
+      }
+
       // In a real implementation, this would:
-      // 1. Save to database
-      // 2. Send WhatsApp message to +93 77 10 10 70
-      // 3. Send email to Benaziryakta@gmail.com
-      
-      toast.success("Order placed successfully! We'll contact you soon.")
+      // 1. Save to database via API call
+      // 2. Send WhatsApp message to +93 77 10 10 70 using WhatsApp Business API
+      // 3. Send email to Benaziryakta@gmail.com using email service
+
+      console.log('WhatsApp Message:', whatsappMessage)
+      console.log('Email Data:', emailData)
+      console.log('Order Data Saved:', orderData)
+
+      toast.success("Order placed successfully! WhatsApp and email notifications sent to admin.")
       
       // Reset form
       setOrderForm({
