@@ -18,7 +18,7 @@ export function Navigation() {
   const location = useLocation()
 
   return (
-    <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b border-border/40">
+    <header className="glass sticky top-0 z-50 w-full border-b border-white/20">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5 flex items-center space-x-2">
