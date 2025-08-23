@@ -5,7 +5,6 @@ import { Badge } from "@/components/ui/badge"
 import { Layout } from "@/components/layout"
 import { 
   ArrowRight, 
-  Leaf, 
   Users, 
   ShoppingCart, 
   Phone, 
@@ -13,264 +12,381 @@ import {
   Award,
   TrendingUp,
   Globe,
-  CheckCircle
+  CheckCircle,
+  Grape,
+  Apple,
+  Cherry,
+  Nut
 } from "lucide-react"
 
 export default function Index() {
   return (
-    <Layout>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/10">
-        <div className="mx-auto max-w-7xl px-6 pt-16 pb-24 sm:pt-24 sm:pb-32 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <Badge variant="secondary" className="mb-6">
-              Premium Fruits & Produce Trading
-            </Badge>
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-              Connecting Farmers to
-              <span className="text-primary"> Global Markets</span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Benazir Yakta Trading Company bridges the gap between local farmers and international markets, 
-              delivering premium quality fruits and produce with unmatched freshness and reliability.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button asChild size="lg">
-                <Link to="/marketplace" className="flex items-center space-x-2">
-                  <ShoppingCart className="h-5 w-5" />
-                  <span>Explore Marketplace</span>
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/partnership" className="flex items-center space-x-2">
-                  <Users className="h-5 w-5" />
-                  <span>Partner With Us</span>
-                </Link>
-              </Button>
-            </div>
-          </div>
+    <div className="min-h-screen dynamic-bg dark:dynamic-bg-dark relative overflow-hidden">
+      {/* Floating Dried Fruit Elements */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-20 left-16 text-6xl text-blue-200/30 floating">
+          🥜
         </div>
-        
-        {/* Decorative elements */}
-        <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-          <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-primary to-accent opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" />
+        <div className="absolute top-1/4 right-20 text-5xl text-green-200/30 floating-reverse" style={{animationDelay: '0.5s'}}>
+          🫐
         </div>
-      </section>
+        <div className="absolute bottom-32 left-1/4 text-7xl text-blue-300/30 floating" style={{animationDelay: '1s'}}>
+          🥥
+        </div>
+        <div className="absolute top-1/2 right-1/3 text-6xl text-green-300/30 floating-reverse" style={{animationDelay: '1.5s'}}>
+          🌰
+        </div>
+        <div className="absolute bottom-20 right-32 text-8xl text-blue-200/30 floating" style={{animationDelay: '2s'}}>
+          🍇
+        </div>
+        <div className="absolute top-32 left-1/3 text-5xl text-green-200/30 floating-reverse" style={{animationDelay: '2.5s'}}>
+          🥭
+        </div>
+        <div className="absolute bottom-1/4 left-20 text-6xl text-blue-300/30 floating" style={{animationDelay: '3s'}}>
+          🫒
+        </div>
+      </div>
 
-      {/* Company Achievements */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
-            <div className="mx-auto flex max-w-xs flex-col gap-y-4">
-              <dt className="text-base leading-7 text-muted-foreground">Years of Experience</dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight text-foreground sm:text-5xl">10+</dd>
-            </div>
-            <div className="mx-auto flex max-w-xs flex-col gap-y-4">
-              <dt className="text-base leading-7 text-muted-foreground">Partner Farmers</dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight text-foreground sm:text-5xl">500+</dd>
-            </div>
-            <div className="mx-auto flex max-w-xs flex-col gap-y-4">
-              <dt className="text-base leading-7 text-muted-foreground">Countries Served</dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight text-foreground sm:text-5xl">15+</dd>
-            </div>
-            <div className="mx-auto flex max-w-xs flex-col gap-y-4">
-              <dt className="text-base leading-7 text-muted-foreground">Tons Traded Annually</dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight text-foreground sm:text-5xl">1000+</dd>
-            </div>
-          </dl>
-        </div>
-      </section>
-
-      {/* Mission Statement */}
-      <section className="bg-muted/50 py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Our Mission</h2>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              To empower local farmers by providing them access to international markets while ensuring 
-              consumers worldwide receive the finest quality produce from Afghanistan's fertile lands.
-            </p>
-          </div>
-          <div className="mx-auto mt-16 max-w-5xl">
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-              <div className="flex flex-col items-center text-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <Leaf className="h-8 w-8" />
-                </div>
-                <h3 className="mt-6 text-lg font-semibold text-foreground">Quality Assurance</h3>
-                <p className="mt-2 text-muted-foreground">
-                  Rigorous quality control ensuring only the finest produce reaches our customers.
-                </p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <Globe className="h-8 w-8" />
-                </div>
-                <h3 className="mt-6 text-lg font-semibold text-foreground">Global Reach</h3>
-                <p className="mt-2 text-muted-foreground">
-                  Connecting local farmers to international markets across multiple continents.
-                </p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <Award className="h-8 w-8" />
-                </div>
-                <h3 className="mt-6 text-lg font-semibold text-foreground">Excellence</h3>
-                <p className="mt-2 text-muted-foreground">
-                  Committed to excellence in every aspect of our trading operations.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Preview Sections */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Explore Our Services</h2>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Discover how we can serve your needs through our comprehensive trading solutions.
-            </p>
-          </div>
-          <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-3">
+      <Layout>
+        {/* Hero Section */}
+        <section className="relative min-h-screen flex items-center justify-center px-6 pt-16 pb-24">
+          <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-12 items-center">
             
-            {/* Marketplace Preview */}
-            <Card className="group hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                  <ShoppingCart className="h-6 w-6" />
-                </div>
-                <CardTitle className="text-xl">Premium Marketplace</CardTitle>
-                <CardDescription>
-                  Browse our extensive catalog of fresh fruits and premium produce, sourced directly from trusted farmers.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm text-muted-foreground">Fresh seasonal fruits</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm text-muted-foreground">Quality guaranteed</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm text-muted-foreground">Competitive pricing</span>
-                  </div>
-                </div>
-                <Button asChild className="mt-6 w-full group-hover:bg-primary/90">
-                  <Link to="/marketplace">
-                    View Products
-                    <ArrowRight className="ml-2 h-4 w-4" />
+            {/* Left Side - Hero Content */}
+            <div className="text-center lg:text-left space-y-8">
+              <Badge variant="secondary" className="glass text-primary border-primary/20 mb-6 px-4 py-2">
+                Premium Afghan Dried Fruits
+              </Badge>
+              
+              <h1 className="text-5xl lg:text-7xl font-bold text-gray-800 dark:text-white leading-tight">
+                <span className="text-glow">Connecting Farmers</span>
+                <br />
+                <span className="text-primary text-glow">to Global Markets</span>
+              </h1>
+              
+              <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl">
+                Benazir Yakta Trading Company - Premium quality dried fruits, nuts, and spices 
+                sourced directly from Afghan farmers with unmatched freshness and reliability.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button asChild size="lg" className="btn-glow">
+                  <Link to="/marketplace" className="flex items-center space-x-2">
+                    <ShoppingCart className="h-5 w-5" />
+                    <span>Explore Marketplace</span>
+                    <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
-              </CardContent>
-            </Card>
-
-            {/* Partnership Preview */}
-            <Card className="group hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                  <Users className="h-6 w-6" />
-                </div>
-                <CardTitle className="text-xl">Farmer Partnership</CardTitle>
-                <CardDescription>
-                  Join our network of successful farmers and access international markets with our support and expertise.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm text-muted-foreground">Fair trade practices</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm text-muted-foreground">Technical support</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm text-muted-foreground">Guaranteed market access</span>
-                  </div>
-                </div>
-                <Button asChild className="mt-6 w-full group-hover:bg-primary/90">
-                  <Link to="/partnership">
-                    Become a Partner
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                <Button variant="outline" size="lg" asChild className="glass border-primary/30">
+                  <Link to="/partnership" className="flex items-center space-x-2">
+                    <Users className="h-5 w-5" />
+                    <span>Partner With Us</span>
                   </Link>
                 </Button>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            {/* Contact Preview */}
-            <Card className="group hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                  <Phone className="h-6 w-6" />
+            {/* Right Side - Product Showcase */}
+            <div className="grid grid-cols-2 gap-4">
+              {/* Product Card 1 */}
+              <div className="card-3d glass rounded-2xl p-6 text-center">
+                <div className="text-5xl mb-4">🥜</div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Premium Almonds</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">Four varieties available</p>
+                <div className="mt-3 h-1 bg-gray-200 dark:bg-gray-700 rounded-full">
+                  <div className="h-1 bg-primary rounded-full w-4/5"></div>
                 </div>
-                <CardTitle className="text-xl">Get in Touch</CardTitle>
-                <CardDescription>
-                  Have questions or special requirements? Our team is ready to assist you with personalized solutions.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm text-muted-foreground">24/7 customer support</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm text-muted-foreground">Custom solutions</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-sm text-muted-foreground">Expert consultation</span>
-                  </div>
-                </div>
-                <Button asChild className="mt-6 w-full group-hover:bg-primary/90">
-                  <Link to="/contact">
-                    Contact Us
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+              </div>
 
-      {/* Call to Action */}
-      <section className="bg-primary text-primary-foreground">
-        <div className="px-6 py-16 sm:px-6 sm:py-24 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Ready to Start Trading?
-            </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-primary-foreground/90">
-              Join hundreds of satisfied customers and partners who trust Benazir Yakta Trading Company 
-              for their produce trading needs.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button variant="secondary" size="lg" asChild>
-                <Link to="/marketplace">
-                  Start Shopping
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                <Link to="/contact">
-                  Get Quote
-                </Link>
-              </Button>
+              {/* Product Card 2 */}
+              <div className="card-3d glass rounded-2xl p-6 text-center">
+                <div className="text-5xl mb-4">🍇</div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Golden Raisins</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">Premium quality</p>
+                <div className="mt-3 h-1 bg-gray-200 dark:bg-gray-700 rounded-full">
+                  <div className="h-1 bg-green-500 rounded-full w-3/4"></div>
+                </div>
+              </div>
+
+              {/* Product Card 3 */}
+              <div className="card-3d glass rounded-2xl p-6 text-center">
+                <div className="text-5xl mb-4">🫐</div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Dried Apricots</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">Sun-dried naturally</p>
+                <div className="mt-3 h-1 bg-gray-200 dark:bg-gray-700 rounded-full">
+                  <div className="h-1 bg-orange-500 rounded-full w-5/6"></div>
+                </div>
+              </div>
+
+              {/* Product Card 4 */}
+              <div className="card-3d glass rounded-2xl p-6 text-center">
+                <div className="text-5xl mb-4">🌰</div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Pine Nuts</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">Organic & fresh</p>
+                <div className="mt-3 h-1 bg-gray-200 dark:bg-gray-700 rounded-full">
+                  <div className="h-1 bg-green-600 rounded-full w-2/3"></div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </Layout>
+        </section>
+
+        {/* Company Achievements */}
+        <section className="py-24 relative">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="glass rounded-3xl p-12">
+              <h2 className="text-3xl font-bold text-center mb-16 text-gray-800 dark:text-white">
+                Trusted by <span className="text-primary text-glow">Global Partners</span>
+              </h2>
+              <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
+                <div className="flex flex-col gap-y-4">
+                  <dt className="text-base text-gray-600 dark:text-gray-300">Years of Experience</dt>
+                  <dd className="text-5xl font-bold text-primary text-glow">10+</dd>
+                </div>
+                <div className="flex flex-col gap-y-4">
+                  <dt className="text-base text-gray-600 dark:text-gray-300">Partner Farmers</dt>
+                  <dd className="text-5xl font-bold text-primary text-glow">500+</dd>
+                </div>
+                <div className="flex flex-col gap-y-4">
+                  <dt className="text-base text-gray-600 dark:text-gray-300">Countries Served</dt>
+                  <dd className="text-5xl font-bold text-primary text-glow">15+</dd>
+                </div>
+                <div className="flex flex-col gap-y-4">
+                  <dt className="text-base text-gray-600 dark:text-gray-300">Tons Traded Annually</dt>
+                  <dd className="text-5xl font-bold text-primary text-glow">1000+</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
+
+        {/* Mission Statement */}
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-6">Our Mission</h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                To enhance global access to high-quality Afghan agricultural products while supporting 
+                women's economic empowerment and promoting ethical, sustainable business practices.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+              <div className="card-3d glass rounded-2xl p-8 text-center">
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Award className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Quality Excellence</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Maintaining the highest standards in sourcing, processing, and exporting premium dried fruits.
+                </p>
+              </div>
+              
+              <div className="card-3d glass rounded-2xl p-8 text-center">
+                <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Globe className="h-8 w-8 text-green-500" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Global Reach</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Connecting local Afghan farmers to international markets across multiple continents.
+                </p>
+              </div>
+              
+              <div className="card-3d glass rounded-2xl p-8 text-center">
+                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Users className="h-8 w-8 text-blue-500" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Women Empowerment</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Providing employment to 100+ Afghan women while fostering economic opportunities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Preview Sections */}
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-6">Explore Our Services</h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300">
+                Discover how we serve farmers, customers, and partners worldwide
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-4">
+              
+              {/* Partnership Preview */}
+              <Card className="card-3d glass border-primary/20 hover:border-primary/40">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
+                    <Users className="h-6 w-6 text-green-500" />
+                  </div>
+                  <CardTitle className="text-xl">Join Our Team</CardTitle>
+                  <CardDescription>
+                    Partner with 500+ successful farmers and access international markets with our support.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-green-500" />
+                      <span className="text-sm">Fair trade practices</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-green-500" />
+                      <span className="text-sm">Technical support</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-green-500" />
+                      <span className="text-sm">Guaranteed market access</span>
+                    </div>
+                  </div>
+                  <Button asChild className="w-full">
+                    <Link to="/partnership">
+                      Become a Partner
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Marketplace Preview */}
+              <Card className="card-3d glass border-primary/20 hover:border-primary/40">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <ShoppingCart className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-xl">Premium Marketplace</CardTitle>
+                  <CardDescription>
+                    Browse our extensive catalog of fresh dried fruits and premium produce.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <span className="text-sm">Fresh seasonal fruits</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <span className="text-sm">Quality guaranteed</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <span className="text-sm">Global shipping</span>
+                    </div>
+                  </div>
+                  <Button asChild className="w-full">
+                    <Link to="/marketplace">
+                      View Products
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* About Preview */}
+              <Card className="card-3d glass border-primary/20 hover:border-primary/40">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                    <Award className="h-6 w-6 text-blue-500" />
+                  </div>
+                  <CardTitle className="text-xl">Our Story</CardTitle>
+                  <CardDescription>
+                    Learn about our journey, mission, and commitment to excellence since 2017.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-blue-500" />
+                      <span className="text-sm">Award-winning company</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-blue-500" />
+                      <span className="text-sm">Women-led enterprise</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-blue-500" />
+                      <span className="text-sm">Global recognition</span>
+                    </div>
+                  </div>
+                  <Button asChild className="w-full" variant="outline">
+                    <Link to="/about">
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Contact Preview */}
+              <Card className="card-3d glass border-primary/20 hover:border-primary/40">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-orange-500" />
+                  </div>
+                  <CardTitle className="text-xl">Get in Touch</CardTitle>
+                  <CardDescription>
+                    Contact our team for inquiries, custom solutions, and expert consultation.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-orange-500" />
+                      <span className="text-sm">24/7 support</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-orange-500" />
+                      <span className="text-sm">Global offices</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-orange-500" />
+                      <span className="text-sm">Expert consultation</span>
+                    </div>
+                  </div>
+                  <Button asChild className="w-full" variant="outline">
+                    <Link to="/contact">
+                      Contact Us
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-24">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <div className="glass rounded-3xl p-12">
+              <h2 className="text-4xl font-bold mb-6 text-gray-800 dark:text-white">
+                Ready to Start Trading?
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+                Join hundreds of satisfied customers and partners who trust Benazir Yakta Trading Company 
+                for their premium dried fruits and produce trading needs.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="btn-glow">
+                  <Link to="/marketplace">
+                    Start Shopping
+                  </Link>
+                </Button>
+                <Button variant="outline" size="lg" asChild className="glass border-primary/30">
+                  <Link to="/contact">
+                    Get Quote
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Layout>
+    </div>
   )
 }
