@@ -221,45 +221,63 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Mission Statement */}
+        {/* Mission & Vision from PDF */}
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-6">Our Mission</h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                To enhance global access to high-quality Afghan agricultural products while supporting 
-                women's economic empowerment and promoting ethical, sustainable business practices.
-              </p>
+              <h2 className="text-4xl lg:text-5xl font-display font-bold text-gray-800 dark:text-white mb-6">
+                Our <span className="text-primary text-glow">Mission & Vision</span>
+              </h2>
+              <div className="max-w-4xl mx-auto space-y-6">
+                <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-200 leading-relaxed">
+                  <span className="font-semibold text-primary">Mission:</span> To enhance global access to high-quality Afghan agricultural products while supporting
+                  women's economic empowerment and promoting ethical, sustainable business practices.
+                </p>
+                <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-200 leading-relaxed">
+                  <span className="font-semibold text-cyan-600">Vision:</span> To become the leading exporter of Afghan dried fruits, nuts, and spices,
+                  recognized for quality, sustainability, and social responsibility.
+                </p>
+              </div>
             </div>
-            
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-              <div className="card-3d glass rounded-2xl p-8 text-center">
-                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Award className="h-8 w-8 text-primary" />
+
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
+              <div className="card-3d glass rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                  <Award className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Quality Excellence</h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Maintaining the highest standards in sourcing, processing, and exporting premium dried fruits.
+                <h3 className="text-xl font-display font-semibold mb-4 text-gray-800 dark:text-white">Quality Excellence</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Maintaining the highest standards in sourcing, processing, and exporting with international food safety compliance.
                 </p>
               </div>
-              
-              <div className="card-3d glass rounded-2xl p-8 text-center">
-                <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Globe className="h-8 w-8 text-green-500" />
+
+              <div className="card-3d glass rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                  <Globe className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Global Reach</h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Connecting local Afghan farmers to international markets across multiple continents.
+                <h3 className="text-xl font-display font-semibold mb-4 text-gray-800 dark:text-white">Sustainability</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Ensuring long-term environmental and economic sustainability while supporting fair trade practices.
                 </p>
               </div>
-              
-              <div className="card-3d glass rounded-2xl p-8 text-center">
-                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Users className="h-8 w-8 text-blue-500" />
+
+              <div className="card-3d glass rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                  <Heart className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Women Empowerment</h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Providing employment to 100+ Afghan women while fostering economic opportunities.
+                <h3 className="text-xl font-display font-semibold mb-4 text-gray-800 dark:text-white">Women Empowerment</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Providing employment and skills training for 100+ Afghan women, fostering economic independence.
+                </p>
+              </div>
+
+              <div className="card-3d glass rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                  <Shield className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-xl font-display font-semibold mb-4 text-gray-800 dark:text-white">Fair Trade</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Supporting local farmers with ethical business practices and fair compensation for their hard work.
                 </p>
               </div>
             </div>
