@@ -1,10 +1,10 @@
 import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/theme-toggle"
 import { LanguageToggle } from "@/components/language-toggle"
-import { Menu, X, User, Leaf } from "lucide-react"
+import { Menu, X, User, Leaf, Sun, Moon } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useTheme } from "@/components/theme-provider"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -18,9 +18,14 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [language, setLanguage] = useState<"en" | "fa">("en")
   const location = useLocation()
+  const { theme, setTheme } = useTheme()
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark")
+  }
 
   return (
-    <header className="fixed top-0 z-50 w-full glass backdrop-blur-lg border-b border-white/20">
+    <header className="fixed top-0 z-50 w-full glass backdrop-blur-xl border-b border-white/10 shadow-lg bg-white/5 dark:bg-black/5">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5 flex items-center space-x-3">
@@ -37,12 +42,21 @@ export function Navigation() {
         <div className="flex lg:hidden">
           <div className="flex items-center space-x-2">
             <LanguageToggle language={language} onLanguageChange={setLanguage} />
-            <ThemeToggle />
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              className="h-10 w-10 rounded-xl glass border border-white/20 hover:bg-white/20 transition-all duration-300"
+            >
+              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-yellow-500" />
+              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-blue-400" />
+              <span className="sr-only">Toggle theme</span>
+            </Button>
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(true)}
-              className="h-8 w-8"
+              className="h-10 w-10 rounded-xl glass border border-white/20 hover:bg-white/20"
             >
               <span className="sr-only">Open main menu</span>
               <Menu className="h-5 w-5" aria-hidden="true" />
@@ -67,10 +81,19 @@ export function Navigation() {
           ))}
         </div>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:space-x-3">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:space-x-4">
           <LanguageToggle language={language} onLanguageChange={setLanguage} />
-          <ThemeToggle />
-          <Button asChild size="sm" className="bg-gradient-to-r from-primary to-cyan-500 hover:from-primary/90 hover:to-cyan-500/90">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleTheme}
+            className="h-10 w-10 rounded-xl glass border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+          >
+            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-yellow-500" />
+            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-blue-400" />
+            <span className="sr-only">Toggle theme</span>
+          </Button>
+          <Button asChild size="sm" className="bg-gradient-to-r from-primary to-cyan-500 hover:from-primary/90 hover:to-cyan-500/90 btn-glow rounded-xl px-6">
             <Link to="/admin" className="flex items-center space-x-2">
               <User className="h-4 w-4" />
               <span>Admin</span>
