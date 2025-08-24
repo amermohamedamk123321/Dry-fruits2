@@ -148,31 +148,75 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Company Achievements */}
+        {/* Real Company Achievements from PDF */}
         <section className="py-24 relative">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="glass rounded-3xl p-12">
-              <h2 className="text-3xl font-bold text-center mb-16 text-gray-800 dark:text-white">
-                Trusted by <span className="text-primary text-glow">Global Partners</span>
-              </h2>
-              <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
-                <div className="flex flex-col gap-y-4">
-                  <dt className="text-base text-gray-600 dark:text-gray-300">Years of Experience</dt>
-                  <dd className="text-5xl font-bold text-primary text-glow">10+</dd>
+            <div className="glass rounded-3xl p-12 border border-white/10">
+              <div className="text-center mb-16">
+                <Badge variant="secondary" className="mb-4 px-4 py-2">
+                  🏆 Award-Winning Performance
+                </Badge>
+                <h2 className="text-3xl lg:text-4xl font-display font-bold text-gray-800 dark:text-white mb-4">
+                  Recognized <span className="text-primary text-glow">Globally</span>
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                  First women-led enterprise to utilize air corridor for Afghan fruit exports.
+                  Winner of "Best Woman in Export" and "Afghanistan's Best Exporter" awards.
+                </p>
+              </div>
+
+              <dl className="grid grid-cols-1 gap-x-8 gap-y-12 text-center lg:grid-cols-4">
+                <div className="flex flex-col gap-y-4 p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
+                  <div className="mx-auto h-16 w-16 rounded-full bg-gradient-to-br from-primary to-cyan-500 flex items-center justify-center">
+                    <Building2 className="h-8 w-8 text-white" />
+                  </div>
+                  <dt className="text-base font-medium text-gray-600 dark:text-gray-300">Years in Business</dt>
+                  <dd className="text-5xl font-display font-bold text-primary text-glow">7+</dd>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Since 2017</p>
                 </div>
-                <div className="flex flex-col gap-y-4">
-                  <dt className="text-base text-gray-600 dark:text-gray-300">Partner Farmers</dt>
-                  <dd className="text-5xl font-bold text-primary text-glow">500+</dd>
+
+                <div className="flex flex-col gap-y-4 p-6 rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
+                  <div className="mx-auto h-16 w-16 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+                    <Heart className="h-8 w-8 text-white" />
+                  </div>
+                  <dt className="text-base font-medium text-gray-600 dark:text-gray-300">Women Employed</dt>
+                  <dd className="text-5xl font-display font-bold text-green-600 text-glow-green">100</dd>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">20 full-time, 80 seasonal</p>
                 </div>
-                <div className="flex flex-col gap-y-4">
-                  <dt className="text-base text-gray-600 dark:text-gray-300">Countries Served</dt>
-                  <dd className="text-5xl font-bold text-primary text-glow">15+</dd>
+
+                <div className="flex flex-col gap-y-4 p-6 rounded-2xl bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900/20 dark:to-yellow-900/20">
+                  <div className="mx-auto h-16 w-16 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center">
+                    <Users className="h-8 w-8 text-white" />
+                  </div>
+                  <dt className="text-base font-medium text-gray-600 dark:text-gray-300">Partner Farmers</dt>
+                  <dd className="text-5xl font-display font-bold text-orange-600">20</dd>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Across Afghanistan</p>
                 </div>
-                <div className="flex flex-col gap-y-4">
-                  <dt className="text-base text-gray-600 dark:text-gray-300">Tons Traded Annually</dt>
-                  <dd className="text-5xl font-bold text-primary text-glow">1000+</dd>
+
+                <div className="flex flex-col gap-y-4 p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20">
+                  <div className="mx-auto h-16 w-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                    <Globe className="h-8 w-8 text-white" />
+                  </div>
+                  <dt className="text-base font-medium text-gray-600 dark:text-gray-300">Global Markets</dt>
+                  <dd className="text-5xl font-display font-bold text-purple-600">5</dd>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">UK, Switzerland, Dubai, France, India</p>
                 </div>
               </dl>
+
+              {/* Awards Section */}
+              <div className="mt-16 pt-8 border-t border-white/10">
+                <div className="flex flex-wrap justify-center gap-4">
+                  <Badge variant="outline" className="bg-yellow-50 dark:bg-yellow-900/20 border-yellow-500/50 text-yellow-700 dark:text-yellow-300 px-4 py-2">
+                    🏆 Best Woman in Export
+                  </Badge>
+                  <Badge variant="outline" className="bg-blue-50 dark:bg-blue-900/20 border-blue-500/50 text-blue-700 dark:text-blue-300 px-4 py-2">
+                    🥈 2nd Best Exporter of Afghanistan
+                  </Badge>
+                  <Badge variant="outline" className="bg-green-50 dark:bg-green-900/20 border-green-500/50 text-green-700 dark:text-green-300 px-4 py-2">
+                    ✈️ First Women-Led Air Corridor User
+                  </Badge>
+                </div>
+              </div>
             </div>
           </div>
         </section>
