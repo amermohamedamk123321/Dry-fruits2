@@ -3,20 +3,20 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Layout } from "@/components/layout"
-import { 
-  ArrowRight, 
-  Users, 
-  ShoppingCart, 
-  Phone, 
+import {
+  ArrowRight,
+  Users,
+  ShoppingCart,
+  Phone,
   Star,
   Award,
   TrendingUp,
   Globe,
   CheckCircle,
-  Grape,
-  Apple,
-  Cherry,
-  Nut
+  Building2,
+  Heart,
+  Truck,
+  Shield
 } from "lucide-react"
 
 export default function Index() {
