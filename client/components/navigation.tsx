@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { LanguageToggle } from "@/components/language-toggle"
 import { Menu, X, User, Leaf } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -15,57 +16,64 @@ const navigation = [
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [language, setLanguage] = useState<"en" | "fa">("en")
   const location = useLocation()
 
   return (
-    <header className="glass sticky top-0 z-50 w-full border-b border-white/20">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <header className="fixed top-0 z-50 w-full glass backdrop-blur-lg border-b border-white/20">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link to="/" className="-m-1.5 p-1.5 flex items-center space-x-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-              <Leaf className="h-5 w-5" />
+          <Link to="/" className="-m-1.5 p-1.5 flex items-center space-x-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-cyan-500 text-white shadow-lg">
+              <Leaf className="h-6 w-6" />
             </div>
-            <span className="font-bold text-lg">Benazir Yakta</span>
+            <div className="hidden sm:block">
+              <span className="font-display font-bold text-lg text-gray-800 dark:text-white">Benazir Yakta</span>
+              <p className="text-xs text-gray-600 dark:text-gray-300">Trading Company</p>
+            </div>
           </Link>
         </div>
-        
+
         <div className="flex lg:hidden">
           <div className="flex items-center space-x-2">
+            <LanguageToggle language={language} onLanguageChange={setLanguage} />
             <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(true)}
+              className="h-8 w-8"
             >
               <span className="sr-only">Open main menu</span>
-              <Menu className="h-6 w-6" aria-hidden="true" />
+              <Menu className="h-5 w-5" aria-hidden="true" />
             </Button>
           </div>
         </div>
-        
-        <div className="hidden lg:flex lg:gap-x-12">
+
+        <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map((item) => (
             <Link
               key={item.name}
               to={item.href}
               className={cn(
-                "text-sm font-semibold leading-6 transition-colors hover:text-primary",
+                "text-sm font-medium leading-6 transition-all duration-200 hover:text-primary relative px-3 py-2 rounded-lg",
                 location.pathname === item.href
-                  ? "text-primary"
-                  : "text-muted-foreground"
+                  ? "text-primary bg-primary/10"
+                  : "text-gray-700 dark:text-gray-300 hover:bg-white/10"
               )}
             >
               {item.name}
             </Link>
           ))}
         </div>
-        
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:space-x-4">
+
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:space-x-3">
+          <LanguageToggle language={language} onLanguageChange={setLanguage} />
           <ThemeToggle />
-          <Button asChild>
+          <Button asChild size="sm" className="bg-gradient-to-r from-primary to-cyan-500 hover:from-primary/90 hover:to-cyan-500/90">
             <Link to="/admin" className="flex items-center space-x-2">
               <User className="h-4 w-4" />
-              <span>Admin Login</span>
+              <span>Admin</span>
             </Link>
           </Button>
         </div>
