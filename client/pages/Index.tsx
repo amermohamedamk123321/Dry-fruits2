@@ -51,36 +51,49 @@ export default function Index() {
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center px-6 pt-16 pb-24">
           <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-12 items-center">
-            
+
             {/* Left Side - Hero Content */}
             <div className="text-center lg:text-left space-y-8">
-              <Badge variant="secondary" className="glass text-primary border-primary/20 mb-6 px-4 py-2">
-                Premium Afghan Dried Fruits
+              <Badge variant="secondary" className="glass text-primary border-primary/20 mb-6 px-6 py-3 text-sm font-medium">
+                🏆 Award-Winning Afghan Export Company Since 2017
               </Badge>
-              
-              <h1 className="text-5xl lg:text-7xl font-bold text-gray-800 dark:text-white leading-tight">
-                <span className="text-glow">Connecting Farmers</span>
+
+              <h1 className="text-5xl lg:text-7xl font-display font-bold text-gray-800 dark:text-white leading-tight">
+                <span className="text-glow-cyan">Benazir Yakta</span>
                 <br />
-                <span className="text-primary text-glow">to Global Markets</span>
+                <span className="text-primary text-glow">Trading Company</span>
               </h1>
-              
-              <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl">
-                Benazir Yakta Trading Company - Premium quality dried fruits, nuts, and spices 
-                sourced directly from Afghan farmers with unmatched freshness and reliability.
+
+              <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed">
+                Premium quality dried fruits, nuts, and spices sourced from Afghan farmers.
+                <span className="text-primary font-semibold"> Women-led enterprise</span> connecting Afghanistan to global markets in
+                <span className="text-cyan-600 font-semibold"> UK, Switzerland, Dubai, France, and India</span>.
               </p>
-              
+
+              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+                <Badge variant="outline" className="bg-white/10 border-cyan-500/50 text-cyan-600 dark:text-cyan-400">
+                  100+ Women Employed
+                </Badge>
+                <Badge variant="outline" className="bg-white/10 border-green-500/50 text-green-600 dark:text-green-400">
+                  20 Partner Farmers
+                </Badge>
+                <Badge variant="outline" className="bg-white/10 border-blue-500/50 text-blue-600 dark:text-blue-400">
+                  5 Global Offices
+                </Badge>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button asChild size="lg" className="btn-glow">
+                <Button asChild size="lg" className="btn-glow bg-gradient-to-r from-primary to-cyan-500 hover:from-primary/90 hover:to-cyan-500/90">
                   <Link to="/marketplace" className="flex items-center space-x-2">
                     <ShoppingCart className="h-5 w-5" />
-                    <span>Explore Marketplace</span>
+                    <span>Explore Products</span>
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild className="glass border-primary/30">
+                <Button variant="outline" size="lg" asChild className="glass border-primary/30 hover:bg-primary/10">
                   <Link to="/partnership" className="flex items-center space-x-2">
                     <Users className="h-5 w-5" />
-                    <span>Partner With Us</span>
+                    <span>Join Our Network</span>
                   </Link>
                 </Button>
               </div>
