@@ -99,46 +99,50 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Right Side - Product Showcase */}
-            <div className="grid grid-cols-2 gap-4">
-              {/* Product Card 1 */}
-              <div className="card-3d glass rounded-2xl p-6 text-center">
-                <div className="text-5xl mb-4">🥜</div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Premium Almonds</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Four varieties available</p>
-                <div className="mt-3 h-1 bg-gray-200 dark:bg-gray-700 rounded-full">
-                  <div className="h-1 bg-primary rounded-full w-4/5"></div>
+            {/* Right Side - 3D Product Showcase */}
+            <div className="grid grid-cols-2 gap-6">
+              {/* Product Card 1 - Almonds */}
+              <div className="card-3d glass rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300">
+                <div className="text-6xl mb-4 floating" style={{animationDelay: '0.2s'}}>🥜</div>
+                <h3 className="text-xl font-display font-semibold mb-2 text-gray-800 dark:text-white">Four Types of Almonds</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">Premium Afghan varieties</p>
+                <div className="mt-3 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                  <div className="h-2 bg-gradient-to-r from-primary to-cyan-500 rounded-full w-4/5 animate-pulse"></div>
                 </div>
+                <Badge variant="secondary" className="mt-3 text-xs">Top Export</Badge>
               </div>
 
-              {/* Product Card 2 */}
-              <div className="card-3d glass rounded-2xl p-6 text-center">
-                <div className="text-5xl mb-4">🍇</div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Golden Raisins</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Premium quality</p>
-                <div className="mt-3 h-1 bg-gray-200 dark:bg-gray-700 rounded-full">
-                  <div className="h-1 bg-green-500 rounded-full w-3/4"></div>
+              {/* Product Card 2 - Raisins */}
+              <div className="card-3d glass rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300">
+                <div className="text-6xl mb-4 floating-reverse" style={{animationDelay: '0.4s'}}>🍇</div>
+                <h3 className="text-xl font-display font-semibold mb-2 text-gray-800 dark:text-white">Premium Raisins</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">Green, Black & Red varieties</p>
+                <div className="mt-3 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                  <div className="h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-3/4 animate-pulse"></div>
                 </div>
+                <Badge variant="secondary" className="mt-3 text-xs">Bestseller</Badge>
               </div>
 
-              {/* Product Card 3 */}
-              <div className="card-3d glass rounded-2xl p-6 text-center">
-                <div className="text-5xl mb-4">🫐</div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Dried Apricots</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Sun-dried naturally</p>
-                <div className="mt-3 h-1 bg-gray-200 dark:bg-gray-700 rounded-full">
-                  <div className="h-1 bg-orange-500 rounded-full w-5/6"></div>
+              {/* Product Card 3 - Apricots */}
+              <div className="card-3d glass rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300">
+                <div className="text-6xl mb-4 floating" style={{animationDelay: '0.6s'}}>🧡</div>
+                <h3 className="text-xl font-display font-semibold mb-2 text-gray-800 dark:text-white">Dried Apricots</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">Sun-dried & machine processed</p>
+                <div className="mt-3 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                  <div className="h-2 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full w-5/6 animate-pulse"></div>
                 </div>
+                <Badge variant="secondary" className="mt-3 text-xs">Premium Quality</Badge>
               </div>
 
-              {/* Product Card 4 */}
-              <div className="card-3d glass rounded-2xl p-6 text-center">
-                <div className="text-5xl mb-4">🌰</div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Pine Nuts</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Organic & fresh</p>
-                <div className="mt-3 h-1 bg-gray-200 dark:bg-gray-700 rounded-full">
-                  <div className="h-1 bg-green-600 rounded-full w-2/3"></div>
+              {/* Product Card 4 - Pine Nuts & More */}
+              <div className="card-3d glass rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300">
+                <div className="text-6xl mb-4 floating-reverse" style={{animationDelay: '0.8s'}}>🌰</div>
+                <h3 className="text-xl font-display font-semibold mb-2 text-gray-800 dark:text-white">Pine Nuts & More</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">Figs, Pistachios & Spices</p>
+                <div className="mt-3 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                  <div className="h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-2/3 animate-pulse"></div>
                 </div>
+                <Badge variant="secondary" className="mt-3 text-xs">Specialty Items</Badge>
               </div>
             </div>
           </div>
