@@ -163,14 +163,14 @@ export function Footer() {
 
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t border-white/10">
-          <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-            <p className="text-sm leading-5 text-gray-600 dark:text-gray-400">
-              &copy; 2024 Benazir Yakta Trading Company. All rights reserved. Empowering Afghan agriculture globally.
+          <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
+            <p className="text-base leading-6 text-gray-600 dark:text-gray-400 font-medium">
+              &copy; 2024 Benazir Yakta Trading Company. All rights reserved. <span className="text-primary font-semibold">Empowering Afghan agriculture globally.</span>
             </p>
-            <div className="flex items-center space-x-6 text-sm text-gray-600 dark:text-gray-400">
-              <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
-              <span className="text-primary font-medium">Women-Led Enterprise</span>
+            <div className="flex items-center space-x-8 text-base text-gray-600 dark:text-gray-400">
+              <Link to="/privacy" className="hover:text-primary transition-colors font-medium hover:underline">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-primary transition-colors font-medium hover:underline">Terms of Service</Link>
+              <span className="text-primary font-bold text-lg bg-primary/10 px-4 py-2 rounded-full border border-primary/20">🏆 Women-Led Enterprise</span>
             </div>
           </div>
         </div>
