@@ -22,28 +22,28 @@ import {
 export default function Index() {
   return (
     <div className="min-h-screen dynamic-bg dark:dynamic-bg-dark relative overflow-hidden">
-      {/* Floating Dried Fruit Elements */}
+      {/* 3D Floating Dried Fruit Elements */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-20 left-16 text-6xl text-blue-200/30 floating">
-          🥜
+        <div className="absolute top-20 left-16 text-6xl floating drop-shadow-2xl" style={{filter: 'drop-shadow(0 25px 50px rgba(59, 130, 246, 0.3))'}}>
+          <div className="transform rotate-12 hover:rotate-6 transition-transform duration-700">🥜</div>
         </div>
-        <div className="absolute top-1/4 right-20 text-5xl text-green-200/30 floating-reverse" style={{animationDelay: '0.5s'}}>
-          🫐
+        <div className="absolute top-1/4 right-20 text-5xl floating-reverse drop-shadow-2xl" style={{animationDelay: '0.5s', filter: 'drop-shadow(0 25px 50px rgba(34, 211, 238, 0.3))'}}>
+          <div className="transform -rotate-12 hover:rotate-0 transition-transform duration-700">🫐</div>
         </div>
-        <div className="absolute bottom-32 left-1/4 text-7xl text-blue-300/30 floating" style={{animationDelay: '1s'}}>
-          🥥
+        <div className="absolute bottom-32 left-1/4 text-7xl floating drop-shadow-2xl" style={{animationDelay: '1s', filter: 'drop-shadow(0 25px 50px rgba(59, 130, 246, 0.4))'}}>
+          <div className="transform rotate-45 hover:rotate-12 transition-transform duration-700">🥥</div>
         </div>
-        <div className="absolute top-1/2 right-1/3 text-6xl text-green-300/30 floating-reverse" style={{animationDelay: '1.5s'}}>
-          🌰
+        <div className="absolute top-1/2 right-1/3 text-6xl floating-reverse drop-shadow-2xl" style={{animationDelay: '1.5s', filter: 'drop-shadow(0 25px 50px rgba(16, 185, 129, 0.3))'}}>
+          <div className="transform -rotate-6 hover:rotate-6 transition-transform duration-700">🌰</div>
         </div>
-        <div className="absolute bottom-20 right-32 text-8xl text-blue-200/30 floating" style={{animationDelay: '2s'}}>
-          🍇
+        <div className="absolute bottom-20 right-32 text-8xl floating drop-shadow-2xl" style={{animationDelay: '2s', filter: 'drop-shadow(0 25px 50px rgba(59, 130, 246, 0.2))'}}>
+          <div className="transform rotate-12 hover:-rotate-6 transition-transform duration-700">🍇</div>
         </div>
-        <div className="absolute top-32 left-1/3 text-5xl text-green-200/30 floating-reverse" style={{animationDelay: '2.5s'}}>
-          🥭
+        <div className="absolute top-32 left-1/3 text-5xl floating-reverse drop-shadow-2xl" style={{animationDelay: '2.5s', filter: 'drop-shadow(0 25px 50px rgba(34, 211, 238, 0.3))'}}>
+          <div className="transform -rotate-45 hover:rotate-12 transition-transform duration-700">🧆</div>
         </div>
-        <div className="absolute bottom-1/4 left-20 text-6xl text-blue-300/30 floating" style={{animationDelay: '3s'}}>
-          🫒
+        <div className="absolute bottom-1/4 left-20 text-6xl floating drop-shadow-2xl" style={{animationDelay: '3s', filter: 'drop-shadow(0 25px 50px rgba(16, 185, 129, 0.3))'}}>
+          <div className="transform rotate-6 hover:-rotate-12 transition-transform duration-700">🫒</div>
         </div>
       </div>
 
