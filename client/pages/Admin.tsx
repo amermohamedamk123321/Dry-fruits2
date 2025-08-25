@@ -190,7 +190,7 @@ export default function Admin() {
     toast.success('New product added!')
   }
 
-  const handleDeleteProduct = (productId) => {
+  const handleDeleteProduct = (productId: number) => {
     setContentData(prev => ({
       ...prev,
       products: prev.products.filter(p => p.id !== productId)
