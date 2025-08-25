@@ -32,7 +32,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import { Layout } from "@/components/layout";
-import { Layout } from "@/components/layout";
+// import { Layout } from "@/components/layout";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
