@@ -543,3 +543,81 @@
 .dark ::-webkit-scrollbar-thumb:hover {
   background: rgba(96, 165, 250, 0.7);
 }
+
+/* Enhanced Dark Mode Optimizations */
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+/* Improved text contrast in dark mode */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+
+/* Enhanced glass effects for dark mode */
+.dark .glass {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.dark .glass-card {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Better button contrast in dark mode */
+.dark .btn-primary {
+  background: linear-gradient(135deg, rgb(59, 130, 246), rgb(34, 211, 238));
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.dark .btn-primary:hover {
+  background: linear-gradient(135deg, rgb(37, 99, 235), rgb(6, 182, 212));
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* Enhanced form inputs for dark mode */
+.dark input, .dark textarea, .dark select {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: hsl(var(--foreground));
+}
+
+.dark input:focus, .dark textarea:focus, .dark select:focus {
+  border-color: rgb(59, 130, 246);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Better card hover effects in dark mode */
+.dark .card-3d:hover {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.4);
+}
+
+/* Enhanced navigation in dark mode */
+.dark .glass {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Better text readability on colored backgrounds */
+.dark .text-primary-brand {
+  color: rgb(96, 165, 250);
+}
+
+.dark .text-secondary-brand {
+  color: rgb(103, 232, 249);
+}
+
+.dark .text-accent-brand {
+  color: rgb(52, 211, 153);
+}
