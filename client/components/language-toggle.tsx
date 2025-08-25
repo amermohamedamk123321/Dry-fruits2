@@ -1,57 +1,60 @@
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Languages, Globe, Check } from "lucide-react"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Languages, Globe, Check } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 
-type Language = "en" | "fa"
+type Language = "en" | "fa";
 
 interface LanguageToggleProps {
-  language: Language
-  onLanguageChange: (language: Language) => void
+  language: Language;
+  onLanguageChange: (language: Language) => void;
 }
 
-export function LanguageToggle({ language, onLanguageChange }: LanguageToggleProps) {
+export function LanguageToggle({
+  language,
+  onLanguageChange,
+}: LanguageToggleProps) {
   const languages = {
-    en: { 
-      name: "English", 
+    en: {
+      name: "English",
       nativeName: "English",
-      flag: "🇺🇸", 
+      flag: "🇺🇸",
       dir: "ltr",
-      code: "EN"
+      code: "EN",
     },
-    fa: { 
-      name: "Persian", 
+    fa: {
+      name: "Persian",
       nativeName: "فارسی",
-      flag: "🇦🇫", 
+      flag: "🇦🇫",
       dir: "rtl",
-      code: "فا"
-    }
-  }
+      code: "فا",
+    },
+  };
 
-  const currentLang = languages[language]
+  const currentLang = languages[language];
 
   // Apply RTL/LTR direction to document when language changes
   useEffect(() => {
-    document.documentElement.dir = currentLang.dir
-    document.documentElement.lang = language
-  }, [language, currentLang.dir])
+    document.documentElement.dir = currentLang.dir;
+    document.documentElement.lang = language;
+  }, [language, currentLang.dir]);
 
   const handleLanguageChange = (newLanguage: Language) => {
-    onLanguageChange(newLanguage)
+    onLanguageChange(newLanguage);
     // Store preference in localStorage
-    localStorage.setItem('preferred-language', newLanguage)
-  }
+    localStorage.setItem("preferred-language", newLanguage);
+  };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button 
-          variant="ghost" 
+        <Button
+          variant="ghost"
           size="icon"
           className="h-10 w-10 rounded-xl glass border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 relative group"
         >
@@ -61,11 +64,13 @@ export function LanguageToggle({ language, onLanguageChange }: LanguageTogglePro
               {currentLang.code}
             </span>
           </div>
-          <span className="sr-only">Toggle language - Current: {currentLang.name}</span>
+          <span className="sr-only">
+            Toggle language - Current: {currentLang.name}
+          </span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent 
-        align="end" 
+      <DropdownMenuContent
+        align="end"
         className="w-56 glass backdrop-blur-xl border border-white/20 rounded-2xl p-2 shadow-2xl"
       >
         <div className="px-2 py-1.5 text-sm font-semibold text-gray-700 dark:text-gray-300 border-b border-white/10 mb-1">
@@ -80,9 +85,10 @@ export function LanguageToggle({ language, onLanguageChange }: LanguageTogglePro
             onClick={() => handleLanguageChange(key as Language)}
             className={`
               flex items-center gap-3 px-3 py-3 rounded-xl cursor-pointer transition-all duration-200
-              ${language === key 
-                ? 'bg-primary/10 text-primary border border-primary/20' 
-                : 'hover:bg-white/10 text-gray-700 dark:text-gray-300'
+              ${
+                language === key
+                  ? "bg-primary/10 text-primary border border-primary/20"
+                  : "hover:bg-white/10 text-gray-700 dark:text-gray-300"
               }
             `}
           >
@@ -91,9 +97,7 @@ export function LanguageToggle({ language, onLanguageChange }: LanguageTogglePro
               <div className="font-semibold text-sm">{lang.name}</div>
               <div className="text-xs opacity-70">{lang.nativeName}</div>
             </div>
-            {language === key && (
-              <Check className="h-4 w-4 text-primary" />
-            )}
+            {language === key && <Check className="h-4 w-4 text-primary" />}
           </DropdownMenuItem>
         ))}
         <div className="px-2 py-1.5 text-xs text-gray-500 dark:text-gray-400 border-t border-white/10 mt-1">
@@ -101,5 +105,5 @@ export function LanguageToggle({ language, onLanguageChange }: LanguageTogglePro
         </div>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }
