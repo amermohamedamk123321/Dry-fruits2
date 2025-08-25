@@ -34,7 +34,7 @@ export default function Index() {
           <div className="transform -rotate-12 hover:rotate-0 transition-transform duration-700">🍇</div>
         </div>
         <div className="absolute bottom-32 left-1/4 text-8xl floating drop-shadow-2xl" style={{animationDelay: '1s', filter: 'drop-shadow(0 25px 50px rgba(59, 130, 246, 0.5))'}}>
-          <div className="transform rotate-45 hover:rotate-12 transition-transform duration-700">🫐</div>
+          <div className="transform rotate-45 hover:rotate-12 transition-transform duration-700">���</div>
         </div>
         <div className="absolute top-1/2 right-1/3 text-7xl floating-reverse drop-shadow-2xl" style={{animationDelay: '1.5s', filter: 'drop-shadow(0 25px 50px rgba(16, 185, 129, 0.4))'}}>
           <div className="transform -rotate-6 hover:rotate-6 transition-transform duration-700">🌰</div>
@@ -55,16 +55,16 @@ export default function Index() {
                 🏆 Best Woman in Export Award Winner - Afghanistan
               </Badge>
 
-              <h1 className="text-6xl lg:text-8xl font-display font-black text-gray-800 dark:text-white leading-tight">
+              <h1 className="text-display-xl text-high-contrast">
                 <span className="text-glow-cyan">Benazir Yakta</span>
                 <br />
-                <span className="text-primary text-glow">Trading Company</span>
+                <span className="text-primary-brand text-glow">Trading Company</span>
               </h1>
 
-              <p className="text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 max-w-3xl leading-relaxed font-medium">
-                <span className="text-primary font-bold">Afghanistan's Leading Exporter</span> of premium dried fruits, nuts, and spices.
-                <span className="text-cyan-600 font-bold"> Women-led enterprise</span> connecting Afghan farmers to global markets in
-                <span className="text-green-600 font-bold"> UK, Switzerland, Dubai, France, and India</span>.
+              <p className="text-body-lg text-gray-600 dark:text-gray-300 max-w-3xl">
+                <span className="text-primary-brand font-bold">Afghanistan's Leading Exporter</span> of premium dried fruits, nuts, and spices.
+                <span className="text-secondary-brand font-bold"> Women-led enterprise</span> connecting Afghan farmers to global markets in
+                <span className="text-accent-brand font-bold"> UK, Switzerland, Dubai, France, and India</span>.
               </p>
 
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
