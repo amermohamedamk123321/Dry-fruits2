@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom"
-import { Leaf, Mail, Phone, MapPin, ExternalLink } from "lucide-react"
+import { Leaf, Mail, Phone, MapPin, ExternalLink, Facebook, Instagram, Linkedin, Twitter, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Footer() {
   const socialLinks = [
-    { name: "Facebook", icon: "📘", href: "#", color: "hover:text-blue-600" },
-    { name: "Instagram", icon: "📷", href: "#", color: "hover:text-pink-600" },
-    { name: "LinkedIn", icon: "💼", href: "#", color: "hover:text-blue-700" },
-    { name: "Twitter", icon: "🐦", href: "#", color: "hover:text-blue-400" },
-    { name: "WhatsApp", icon: "💬", href: "#", color: "hover:text-green-600" },
+    { name: "Facebook", icon: Facebook, href: "https://facebook.com/benaziryakta", color: "hover:text-blue-600", bgColor: "bg-blue-600/10 hover:bg-blue-600/20" },
+    { name: "Instagram", icon: Instagram, href: "https://instagram.com/benaziryakta", color: "hover:text-pink-600", bgColor: "bg-pink-600/10 hover:bg-pink-600/20" },
+    { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/company/benaziryakta", color: "hover:text-blue-700", bgColor: "bg-blue-700/10 hover:bg-blue-700/20" },
+    { name: "Twitter", icon: Twitter, href: "https://twitter.com/benaziryakta", color: "hover:text-blue-400", bgColor: "bg-blue-400/10 hover:bg-blue-400/20" },
+    { name: "WhatsApp", icon: MessageCircle, href: "https://wa.me/93771010170", color: "hover:text-green-600", bgColor: "bg-green-600/10 hover:bg-green-600/20" },
   ]
 
   return (
@@ -60,20 +60,28 @@ export function Footer() {
             <div className="pt-4">
               <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">Follow Us</h4>
               <div className="flex space-x-4">
-                {socialLinks.map((social) => (
-                  <Button
-                    key={social.name}
-                    variant="ghost"
-                    size="icon"
-                    asChild
-                    className="h-12 w-12 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 transition-all duration-300"
-                  >
-                    <a href={social.href} className={`flex items-center justify-center ${social.color}`}>
-                      <span className="text-2xl">{social.icon}</span>
-                      <span className="sr-only">{social.name}</span>
-                    </a>
-                  </Button>
-                ))}
+                {socialLinks.map((social) => {
+                  const IconComponent = social.icon
+                  return (
+                    <Button
+                      key={social.name}
+                      variant="ghost"
+                      size="icon"
+                      asChild
+                      className={`h-12 w-12 rounded-xl border border-white/10 hover:border-primary/50 transition-all duration-300 ${social.bgColor} ${social.color}`}
+                    >
+                      <a
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center"
+                      >
+                        <IconComponent className="h-5 w-5" />
+                        <span className="sr-only">{social.name}</span>
+                      </a>
+                    </Button>
+                  )
+                })}
               </div>
             </div>
           </div>
