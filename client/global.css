@@ -217,7 +217,7 @@
 }
 
 .dark .dynamic-bg-dark {
-  background: linear-gradient(-45deg, #0f172a, #1e293b, #164e63, #1e3a8a);
+  background: linear-gradient(-45deg, #0a0d14, #1a1f2e, #0f1419, #1e2a3a);
   background-size: 400% 400%;
   animation: gradientBackground 15s ease infinite;
 }
