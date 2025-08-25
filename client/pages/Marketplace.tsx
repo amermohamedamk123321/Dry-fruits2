@@ -225,7 +225,7 @@ const products = [
     name: "Afghan Spice Mix",
     category: "Spices",
     image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400",
-    fallbackIcon: "🌶️",
+    fallbackIcon: "🌶���",
     description: "Traditional Afghan spice blend for authentic flavoring. A perfect mix of aromatic spices and herbs.",
     price: 20,
     unit: "kg",
@@ -358,11 +358,11 @@ export default function Marketplace() {
               <Badge variant="secondary" className="glass text-primary border-primary/20 mb-6 px-6 py-3 text-lg font-bold">
                 🏆 Premium Afghan Dried Fruits & Nuts
               </Badge>
-              <h1 className="text-5xl lg:text-6xl font-display font-bold text-gray-800 dark:text-white mb-6 text-glow">
-                Premium <span className="text-primary">Marketplace</span>
+              <h1 className="text-display-lg text-high-contrast mb-6 text-glow">
+                Premium <span className="text-primary-brand">Marketplace</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto font-medium">
-                Discover our extensive collection of <span className="text-primary font-bold">award-winning</span> dried fruits, nuts, and spices, 
+              <p className="text-body-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+                Discover our extensive collection of <span className="text-primary-brand font-bold">award-winning</span> dried fruits, nuts, and spices,
                 sourced directly from trusted Afghan farmers.
               </p>
             </div>
