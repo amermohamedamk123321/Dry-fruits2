@@ -120,30 +120,6 @@ const partners = [
   { id: 5, name: 'Omar Rahimi', location: 'Nangarhar', crops: 'Walnuts', joinDate: '2023-02-18', status: 'Active', performance: 'good' }
 ]
 
-// Content management state
-const [contentData, setContentData] = useState({
-  companyInfo: {
-    name: 'Benazir Yakta Trading Company',
-    email: 'Benaziryakta@gmail.com',
-    phone: '+93 77 10 10 70',
-    address: 'Shahrak-e-Omid Sabz, Kabul, Afghanistan',
-    whatsapp: '+93 77 10 10 70'
-  },
-  socialMedia: {
-    facebook: 'https://facebook.com/benaziryakta',
-    instagram: 'https://instagram.com/benaziryakta',
-    linkedin: 'https://linkedin.com/company/benaziryakta',
-    twitter: 'https://twitter.com/benaziryakta'
-  },
-  products: [
-    { id: 1, name: 'Premium Almonds Type 1', price: 45, category: 'Almonds', inStock: true, image: '' },
-    { id: 2, name: 'Premium Almonds Type 2', price: 42, category: 'Almonds', inStock: true, image: '' },
-    { id: 3, name: 'Fresh Walnuts', price: 38, category: 'Walnuts', inStock: true, image: '' },
-    { id: 4, name: 'Green Raisins', price: 25, category: 'Raisins', inStock: true, image: '' },
-    { id: 5, name: 'Dried Apricots', price: 35, category: 'Apricots', inStock: true, image: '' }
-  ]
-})
-
 export default function Admin() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [credentials, setCredentials] = useState({ username: '', password: '' })
@@ -151,6 +127,30 @@ export default function Admin() {
   const [editingProduct, setEditingProduct] = useState(null)
   const [editingPartner, setEditingPartner] = useState(null)
   const [showContentEditor, setShowContentEditor] = useState(false)
+
+  // Content management state
+  const [contentData, setContentData] = useState({
+    companyInfo: {
+      name: 'Benazir Yakta Trading Company',
+      email: 'Benaziryakta@gmail.com',
+      phone: '+93 77 10 10 70',
+      address: 'Shahrak-e-Omid Sabz, Kabul, Afghanistan',
+      whatsapp: '+93 77 10 10 70'
+    },
+    socialMedia: {
+      facebook: 'https://facebook.com/benaziryakta',
+      instagram: 'https://instagram.com/benaziryakta',
+      linkedin: 'https://linkedin.com/company/benaziryakta',
+      twitter: 'https://twitter.com/benaziryakta'
+    },
+    products: [
+      { id: 1, name: 'Premium Almonds Type 1', price: 45, category: 'Almonds', inStock: true, image: '' },
+      { id: 2, name: 'Premium Almonds Type 2', price: 42, category: 'Almonds', inStock: true, image: '' },
+      { id: 3, name: 'Fresh Walnuts', price: 38, category: 'Walnuts', inStock: true, image: '' },
+      { id: 4, name: 'Green Raisins', price: 25, category: 'Raisins', inStock: true, image: '' },
+      { id: 5, name: 'Dried Apricots', price: 35, category: 'Apricots', inStock: true, image: '' }
+    ]
+  })
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
