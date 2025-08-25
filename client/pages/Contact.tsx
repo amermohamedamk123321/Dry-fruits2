@@ -26,6 +26,7 @@ import {
 } from "lucide-react"
 import { toast } from "sonner"
 import { Layout } from "@/components/layout"
+import { Layout } from "@/components/layout"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -76,7 +77,8 @@ export default function Contact() {
         <div className="absolute top-1/2 right-1/3 text-4xl text-green-300/20 floating-reverse" style={{animationDelay: '1.5s'}}>📍</div>
       </div>
 
-      <div className="relative z-10">
+      <Layout>
+        <div className="relative z-10">
         {/* Hero Section */}
         <section className="pt-32 pb-16 px-6">
           <div className="max-w-7xl mx-auto text-center">
@@ -547,7 +549,8 @@ export default function Contact() {
             </div>
           </div>
         </section>
-      </div>
+        </div>
+      </Layout>
     </div>
   )
 }
