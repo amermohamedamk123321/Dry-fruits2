@@ -44,7 +44,7 @@ import {
   AreaChart,
   Area
 } from "recharts"
-import { 
+import {
   BarChart3,
   Users,
   Package,
@@ -69,7 +69,8 @@ import {
   Image,
   Globe,
   MessageSquare,
-  MapPin
+  MapPin,
+  Building2
 } from "lucide-react"
 import { toast } from "sonner"
 import { Layout } from "@/components/layout"
