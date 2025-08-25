@@ -48,12 +48,12 @@ export default function About() {
               <Badge variant="secondary" className="glass text-primary border-primary/20 mb-6 px-8 py-4 text-xl font-bold animate-pulse">
                 🏆 Award-Winning Since 2017
               </Badge>
-              <h1 className="text-5xl lg:text-8xl font-display font-black text-gray-800 dark:text-white mb-6 text-glow leading-tight">
+              <h1 className="text-display-xl text-high-contrast mb-6 text-glow">
                 About <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">Benazir Yakta</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-5xl mx-auto font-medium leading-relaxed">
-                Afghanistan's <span className="text-primary font-bold">pioneering women-led enterprise</span> dedicated to connecting farmers 
-                with global markets while empowering women and promoting <span className="text-green-600 font-bold">sustainable trade practices</span>.
+              <p className="text-body-lg text-gray-600 dark:text-gray-300 max-w-5xl mx-auto">
+                Afghanistan's <span className="text-primary-brand font-bold">pioneering women-led enterprise</span> dedicated to connecting farmers
+                with global markets while empowering women and promoting <span className="text-accent-brand font-bold">sustainable trade practices</span>.
               </p>
               
               {/* Quick Stats */}
