@@ -73,7 +73,6 @@ import {
   Building2
 } from "lucide-react"
 import { toast } from "sonner"
-import { Layout } from "@/components/layout"
 
 // Enhanced mock data with daily granularity
 const dailySalesData = [
