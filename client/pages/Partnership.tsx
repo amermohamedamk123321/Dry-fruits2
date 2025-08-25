@@ -144,14 +144,14 @@ Benazir Yakta Partnership System
               <Badge variant="secondary" className="glass text-primary border-primary/20 mb-6 px-8 py-4 text-xl font-bold animate-pulse">
                 🤝 Join Our Growing Network
               </Badge>
-              <h1 className="text-5xl lg:text-7xl font-display font-black text-gray-800 dark:text-white mb-6 text-glow leading-tight">
+              <h1 className="text-display-lg text-high-contrast mb-6 text-glow">
                 Partner with Afghanistan's <br />
-                <span className="text-primary bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">Leading Export Company</span>
+                <span className="text-primary-brand bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">Leading Export Company</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-5xl mx-auto mb-8 font-medium leading-relaxed">
-                Join our network of <span className="text-primary font-bold">20+ successful farmers</span> and access international markets while 
-                receiving <span className="text-green-600 font-bold">fair trade prices</span>, technical support, and 
-                <span className="text-blue-600 font-bold"> guaranteed market access</span> for your premium crops.
+              <p className="text-body-lg text-gray-600 dark:text-gray-300 max-w-5xl mx-auto mb-8">
+                Join our network of <span className="text-primary-brand font-bold">20+ successful farmers</span> and access international markets while
+                receiving <span className="text-accent-brand font-bold">fair trade prices</span>, technical support, and
+                <span className="text-secondary-brand font-bold"> guaranteed market access</span> for your premium crops.
               </p>
               
               {/* Enhanced CTA Buttons */}
