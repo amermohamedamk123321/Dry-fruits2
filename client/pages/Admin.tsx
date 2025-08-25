@@ -249,8 +249,7 @@ export default function Admin() {
 
   return (
     <div className="min-h-screen dynamic-bg dark:dynamic-bg-dark">
-      <Layout>
-        <div className="relative z-10">
+      <div className="relative z-10">
           {/* Enhanced Header */}
           <div className="glass border-b border-white/20 px-6 py-6">
             <div className="flex items-center justify-between">
@@ -1051,8 +1050,7 @@ export default function Admin() {
               </TabsContent>
             </Tabs>
           </div>
-        </div>
-      </Layout>
+      </div>
     </div>
   )
 }
