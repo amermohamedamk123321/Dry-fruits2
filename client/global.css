@@ -165,9 +165,9 @@
   100% { background-position: 0% 0%; }
 }
 
-/* Light Mode - Purple to Blue Gradient like the image */
+/* Light Mode - Blue Only Gradient for Better Readability */
 .dynamic-bg {
-  background: linear-gradient(135deg, #8B5CF6, #A855F7, #3B82F6, #06B6D4, #8B5CF6);
+  background: linear-gradient(135deg, #3B82F6, #1D4ED8, #0EA5E9, #06B6D4, #3B82F6);
   background-size: 300% 300%;
   animation: gradientShift 20s ease infinite;
   min-height: 100vh;
@@ -181,16 +181,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
-              radial-gradient(circle at 40% 70%, rgba(168, 85, 247, 0.2) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.2) 0%, transparent 50%),
+              radial-gradient(circle at 40% 70%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Dark Mode - Enhanced Purple to Blue with Deeper Tones */
+/* Dark Mode - Enhanced Blue with Deeper Tones */
 .dynamic-bg-dark {
-  background: linear-gradient(135deg, #4C1D95, #5B21B6, #1E3A8A, #164E63, #4C1D95);
+  background: linear-gradient(135deg, #1E3A8A, #1E40AF, #0369A1, #164E63, #1E3A8A);
   background-size: 300% 300%;
   animation: gradientShift 20s ease infinite;
   min-height: 100vh;
@@ -204,9 +204,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(76, 29, 149, 0.4) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(30, 58, 138, 0.4) 0%, transparent 50%),
-              radial-gradient(circle at 40% 70%, rgba(91, 33, 182, 0.3) 0%, transparent 50%),
+  background: radial-gradient(circle at 20% 20%, rgba(30, 58, 138, 0.4) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(3, 105, 161, 0.4) 0%, transparent 50%),
+              radial-gradient(circle at 40% 70%, rgba(30, 64, 175, 0.3) 0%, transparent 50%),
               radial-gradient(circle at 60% 30%, rgba(22, 78, 99, 0.2) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
@@ -481,19 +481,34 @@
   background-color: rgb(16, 185, 129);
 }
 
-/* Enhanced Glass Effects */
+/* Enhanced Glass Effects with Better Text Background */
 .glass-card {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .dark .glass-card {
-  background: rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Better Glass for Text Readability */
+.glass-readable {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.dark .glass-readable {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 /* Content Spacing System */
@@ -572,13 +587,57 @@
   outline-offset: 2px;
 }
 
-/* High Contrast Text */
+/* High Contrast Text for Better Readability */
 .text-high-contrast {
   color: rgb(17, 24, 39);
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .dark .text-high-contrast {
   color: rgb(249, 250, 251);
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Enhanced Text Readability for Light Mode */
+.text-readable-light {
+  color: rgb(17, 24, 39);
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+.dark .text-readable-light {
+  color: rgb(249, 250, 251);
+  font-weight: 500;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Better Text Contrast on Glass Elements */
+.glass .text-readable,
+.glass h1,
+.glass h2,
+.glass h3,
+.glass h4,
+.glass h5,
+.glass h6,
+.glass p {
+  color: rgb(17, 24, 39);
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.dark .glass .text-readable,
+.dark .glass h1,
+.dark .glass h2,
+.dark .glass h3,
+.dark .glass h4,
+.dark .glass h5,
+.dark .glass h6,
+.dark .glass p {
+  color: rgb(249, 250, 251);
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 /* Card Hover Effects */
