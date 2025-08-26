@@ -43,6 +43,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import { Layout } from "@/components/layout";
+import { cn } from "@/lib/utils";
 
 // Product data based on the PDF
 const products = [
