@@ -107,14 +107,14 @@ export default function Contact() {
             <div className="max-w-7xl mx-auto text-center">
               <Badge
                 variant="secondary"
-                className="glass text-primary border-primary/20 mb-6 px-4 py-2"
+                className="glass-readable text-readable-light border-primary/20 mb-6 px-4 py-2"
               >
                 Get in Touch
               </Badge>
-              <h1 className="text-5xl lg:text-7xl font-bold text-gray-800 dark:text-white mb-6 text-glow">
+              <h1 className="text-5xl lg:text-7xl font-bold text-readable-light mb-6 text-glow">
                 Contact <span className="text-primary">Us</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+              <p className="text-xl lg:text-2xl text-readable-light max-w-4xl mx-auto">
                 Have questions about our products or services? Want to become a
                 partner? We're here to help and would love to hear from you.
               </p>
@@ -131,18 +131,18 @@ export default function Contact() {
                     <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Phone className="h-8 w-8 text-blue-500" />
                     </div>
-                    <CardTitle className="text-gray-800 dark:text-white">
+                    <CardTitle className="text-readable-light">
                       Phone
                     </CardTitle>
-                    <CardDescription className="text-gray-600 dark:text-gray-300">
+                    <CardDescription className="text-readable-light">
                       Call us directly
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="text-center">
-                    <p className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+                    <p className="text-lg font-semibold text-readable-light mb-2">
                       +93 77 10 10 70
                     </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                    <p className="text-sm text-readable-light">
                       Available 24/7 for urgent inquiries
                     </p>
                   </CardContent>
