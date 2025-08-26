@@ -25,7 +25,7 @@ export function Navigation() {
   };
 
   return (
-    <header className="fixed top-0 z-50 w-full glass backdrop-blur-xl border-b border-white/10 shadow-lg bg-white/5 dark:bg-black/5">
+    <header className="sticky top-0 z-50 w-full glass-readable backdrop-blur-xl border-b border-white/20 shadow-lg">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
         aria-label="Global"
