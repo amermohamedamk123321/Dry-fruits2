@@ -118,7 +118,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Dynamic Background */
+/* Dynamic Background - Modern Glassmorphism Style */
 @keyframes gradientBackground {
   0% {
     background-position: 0% 50%;
@@ -131,16 +131,59 @@
   }
 }
 
-.dynamic-bg {
-  background: linear-gradient(-45deg, #3b82f6, #ffffff, #22d3ee, #60a5fa);
-  background-size: 400% 400%;
-  animation: gradientBackground 15s ease infinite;
+@keyframes gradientShift {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 100% 0%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
 }
 
+/* Light Mode - Purple to Blue Gradient like the image */
+.dynamic-bg {
+  background: linear-gradient(135deg, #8B5CF6, #A855F7, #3B82F6, #06B6D4, #8B5CF6);
+  background-size: 300% 300%;
+  animation: gradientShift 20s ease infinite;
+  min-height: 100vh;
+  position: relative;
+}
+
+.dynamic-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 40% 70%, rgba(168, 85, 247, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Dark Mode - Enhanced Purple to Blue with Deeper Tones */
 .dynamic-bg-dark {
-  background: linear-gradient(-45deg, #1e3a8a, #1f2937, #155e75, #1e40af);
-  background-size: 400% 400%;
-  animation: gradientBackground 15s ease infinite;
+  background: linear-gradient(135deg, #4C1D95, #5B21B6, #1E3A8A, #164E63, #4C1D95);
+  background-size: 300% 300%;
+  animation: gradientShift 20s ease infinite;
+  min-height: 100vh;
+  position: relative;
+}
+
+.dark .dynamic-bg-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(76, 29, 149, 0.4) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(30, 58, 138, 0.4) 0%, transparent 50%),
+              radial-gradient(circle at 40% 70%, rgba(91, 33, 182, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 60% 30%, rgba(22, 78, 99, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* Floating Animations */
