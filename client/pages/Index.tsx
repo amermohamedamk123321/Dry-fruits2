@@ -100,7 +100,7 @@ export default function Index() {
                 🏆 Best Woman in Export Award Winner - Afghanistan
               </Badge>
 
-              <h1 className="text-display-xl text-high-contrast">
+              <h1 className="text-display-xl text-readable-light">
                 <span className="text-glow-cyan">Benazir Yakta</span>
                 <br />
                 <span className="text-primary-brand text-glow">
@@ -108,7 +108,7 @@ export default function Index() {
                 </span>
               </h1>
 
-              <p className="text-body-lg text-gray-600 dark:text-gray-300 max-w-3xl">
+              <p className="text-body-lg text-readable-light max-w-3xl">
                 <span className="text-primary-brand font-bold">
                   Afghanistan's Leading Exporter
                 </span>{" "}
