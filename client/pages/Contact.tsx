@@ -131,9 +131,7 @@ export default function Contact() {
                     <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Phone className="h-8 w-8 text-blue-500" />
                     </div>
-                    <CardTitle className="text-readable-light">
-                      Phone
-                    </CardTitle>
+                    <CardTitle className="text-readable-light">Phone</CardTitle>
                     <CardDescription className="text-readable-light">
                       Call us directly
                     </CardDescription>

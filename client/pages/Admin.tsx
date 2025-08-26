@@ -919,7 +919,9 @@ export default function Admin() {
                               <Button
                                 variant="outline"
                                 size="sm"
-                                onClick={() => handleContactCustomer(order.id, 'WhatsApp')}
+                                onClick={() =>
+                                  handleContactCustomer(order.id, "WhatsApp")
+                                }
                                 title="Contact via WhatsApp"
                               >
                                 <MessageSquare className="h-4 w-4" />
@@ -928,7 +930,9 @@ export default function Admin() {
                                 <Button
                                   variant="outline"
                                   size="sm"
-                                  onClick={() => handleMarkAsDelivered(order.id)}
+                                  onClick={() =>
+                                    handleMarkAsDelivered(order.id)
+                                  }
                                   title="Mark as Delivered"
                                   className="text-green-600 hover:text-green-700"
                                 >
@@ -1030,7 +1034,9 @@ export default function Admin() {
                               <Button
                                 variant="outline"
                                 size="sm"
-                                onClick={() => handleContactCustomer(order.id, 'Email')}
+                                onClick={() =>
+                                  handleContactCustomer(order.id, "Email")
+                                }
                                 title="Send Email"
                               >
                                 <Mail className="h-4 w-4" />
@@ -1038,7 +1044,9 @@ export default function Admin() {
                               <Button
                                 variant="outline"
                                 size="sm"
-                                onClick={() => handleContactCustomer(order.id, 'Phone')}
+                                onClick={() =>
+                                  handleContactCustomer(order.id, "Phone")
+                                }
                                 title="Call Customer"
                               >
                                 <Phone className="h-4 w-4" />
@@ -1047,7 +1055,9 @@ export default function Admin() {
                                 <Button
                                   variant="outline"
                                   size="sm"
-                                  onClick={() => handleMarkAsDelivered(order.id)}
+                                  onClick={() =>
+                                    handleMarkAsDelivered(order.id)
+                                  }
                                   title="Mark as Delivered"
                                   className="text-green-600 hover:text-green-700"
                                 >
@@ -1259,7 +1269,12 @@ export default function Admin() {
                               <Button
                                 variant="outline"
                                 size="sm"
-                                onClick={() => handleContactCustomer(partner.id.toString(), 'Phone')}
+                                onClick={() =>
+                                  handleContactCustomer(
+                                    partner.id.toString(),
+                                    "Phone",
+                                  )
+                                }
                                 title="Call Partner"
                               >
                                 <Phone className="h-4 w-4" />
