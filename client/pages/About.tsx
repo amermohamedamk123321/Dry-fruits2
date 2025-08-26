@@ -80,17 +80,17 @@ export default function About() {
             <div className="max-w-7xl mx-auto text-center">
               <Badge
                 variant="secondary"
-                className="glass text-primary border-primary/20 mb-6 px-8 py-4 text-xl font-bold animate-pulse"
+                className="glass-readable text-readable-light border-primary/20 mb-6 px-8 py-4 text-xl font-bold animate-pulse"
               >
                 🏆 Award-Winning Since 2017
               </Badge>
-              <h1 className="text-display-xl text-high-contrast mb-6 text-glow">
+              <h1 className="text-display-xl text-readable-light mb-6 text-glow">
                 About{" "}
                 <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
                   Benazir Yakta
                 </span>
               </h1>
-              <p className="text-body-lg text-gray-600 dark:text-gray-300 max-w-5xl mx-auto">
+              <p className="text-body-lg text-readable-light max-w-5xl mx-auto">
                 Afghanistan's{" "}
                 <span className="text-primary-brand font-bold">
                   pioneering women-led enterprise
@@ -105,9 +105,9 @@ export default function About() {
 
               {/* Quick Stats */}
               <div className="flex flex-wrap justify-center gap-8 mt-12">
-                <div className="glass rounded-2xl px-6 py-4 border border-primary/20">
+                <div className="glass-readable rounded-2xl px-6 py-4 border border-primary/20">
                   <div className="text-3xl font-bold text-primary">7+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">
+                  <div className="text-sm text-readable-light">
                     Years Leading
                   </div>
                 </div>
