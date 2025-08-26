@@ -72,6 +72,8 @@ import {
   MessageSquare,
   MapPin,
   Building2,
+  ArrowLeft,
+  CheckCircle,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -355,18 +357,69 @@ export default function Admin() {
     toast.success("Product deleted!");
   };
 
+  const handleEditProduct = (product: any) => {
+    setEditingProduct(product);
+    toast.info("Edit mode activated for " + product.name);
+  };
+
+  const handleViewOrder = (orderId: string) => {
+    toast.info(`Viewing order details for ${orderId}`);
+  };
+
+  const handleEditOrder = (orderId: string) => {
+    toast.info(`Editing order ${orderId}`);
+  };
+
+  const handleMarkAsDelivered = (orderId: string) => {
+    toast.success(`Order ${orderId} marked as delivered!`);
+  };
+
+  const handleContactCustomer = (orderId: string, method: string) => {
+    toast.info(`Contacting customer for order ${orderId} via ${method}`);
+  };
+
+  const handleViewPartner = (partnerId: number) => {
+    toast.info(`Viewing partner details for ID: ${partnerId}`);
+  };
+
+  const handleEditPartner = (partnerId: number) => {
+    toast.info(`Editing partner with ID: ${partnerId}`);
+  };
+
+  const handleAddNewOrder = () => {
+    toast.info("Opening new order form...");
+  };
+
+  const handleAddNewPartner = () => {
+    toast.info("Opening new partner registration form...");
+  };
+
+  const handleUploadImage = (productId: number) => {
+    toast.info(`Image upload for product ID: ${productId}`);
+  };
+
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen dynamic-bg dark:dynamic-bg-dark flex items-center justify-center px-6">
-        <Card className="glass w-full max-w-md border border-white/20">
+        <Card className="glass-readable w-full max-w-md border border-white/20 relative">
+          {/* Exit Button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute top-4 right-4 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+            onClick={() => window.history.back()}
+          >
+            <X className="h-5 w-5" />
+          </Button>
+
           <CardHeader className="text-center">
             <div className="w-20 h-20 bg-gradient-to-br from-primary to-cyan-500 rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-2xl">
               <Settings className="h-10 w-10 text-white" />
             </div>
-            <CardTitle className="text-3xl font-bold text-gray-800 dark:text-white">
+            <CardTitle className="text-3xl font-bold text-readable-light">
               Admin Login
             </CardTitle>
-            <CardDescription className="text-lg text-gray-600 dark:text-gray-300">
+            <CardDescription className="text-lg text-readable-light">
               Enter your credentials to access the enhanced admin dashboard
             </CardDescription>
           </CardHeader>
@@ -375,7 +428,7 @@ export default function Admin() {
               <div>
                 <Label
                   htmlFor="username"
-                  className="text-lg font-semibold text-gray-700 dark:text-gray-300"
+                  className="text-lg font-semibold text-readable-light"
                 >
                   Username
                 </Label>
@@ -386,7 +439,7 @@ export default function Admin() {
                   onChange={(e) =>
                     setCredentials({ ...credentials, username: e.target.value })
                   }
-                  className="glass border-primary/30 rounded-xl py-3 text-lg"
+                  className="glass border-primary/30 rounded-xl py-3 text-lg text-readable-light"
                   placeholder="Enter username"
                   required
                 />
@@ -394,7 +447,7 @@ export default function Admin() {
               <div>
                 <Label
                   htmlFor="password"
-                  className="text-lg font-semibold text-gray-700 dark:text-gray-300"
+                  className="text-lg font-semibold text-readable-light"
                 >
                   Password
                 </Label>
@@ -405,17 +458,28 @@ export default function Admin() {
                   onChange={(e) =>
                     setCredentials({ ...credentials, password: e.target.value })
                   }
-                  className="glass border-primary/30 rounded-xl py-3 text-lg"
+                  className="glass border-primary/30 rounded-xl py-3 text-lg text-readable-light"
                   placeholder="Enter password"
                   required
                 />
               </div>
-              <Button
-                type="submit"
-                className="w-full btn-glow py-4 text-lg rounded-xl"
-              >
-                Login to Dashboard
-              </Button>
+              <div className="flex space-x-3">
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="flex-1 py-4 text-lg rounded-xl"
+                  onClick={() => window.history.back()}
+                >
+                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  Back
+                </Button>
+                <Button
+                  type="submit"
+                  className="flex-1 btn-glow py-4 text-lg rounded-xl"
+                >
+                  Login
+                </Button>
+              </div>
             </form>
           </CardContent>
         </Card>
@@ -774,7 +838,11 @@ export default function Admin() {
                       >
                         2 High Priority
                       </Badge>
-                      <Button size="sm" variant="outline">
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={handleAddNewOrder}
+                      >
                         <Plus className="h-4 w-4 mr-1" />
                         Add Order
                       </Button>
@@ -832,15 +900,41 @@ export default function Admin() {
                           </TableCell>
                           <TableCell>
                             <div className="flex space-x-2">
-                              <Button variant="outline" size="sm">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => handleViewOrder(order.id)}
+                                title="View Order Details"
+                              >
                                 <Eye className="h-4 w-4" />
                               </Button>
-                              <Button variant="outline" size="sm">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => handleEditOrder(order.id)}
+                                title="Edit Order"
+                              >
                                 <Edit className="h-4 w-4" />
                               </Button>
-                              <Button variant="outline" size="sm">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => handleContactCustomer(order.id, 'WhatsApp')}
+                                title="Contact via WhatsApp"
+                              >
                                 <MessageSquare className="h-4 w-4" />
                               </Button>
+                              {order.status !== "Delivered" && (
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  onClick={() => handleMarkAsDelivered(order.id)}
+                                  title="Mark as Delivered"
+                                  className="text-green-600 hover:text-green-700"
+                                >
+                                  <CheckCircle className="h-4 w-4" />
+                                </Button>
+                              )}
                             </div>
                           </TableCell>
                         </TableRow>
@@ -917,18 +1011,49 @@ export default function Admin() {
                           </TableCell>
                           <TableCell>
                             <div className="flex space-x-2">
-                              <Button variant="outline" size="sm">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => handleViewOrder(order.id)}
+                                title="View Order Details"
+                              >
                                 <Eye className="h-4 w-4" />
                               </Button>
-                              <Button variant="outline" size="sm">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => handleEditOrder(order.id)}
+                                title="Edit Order"
+                              >
                                 <Edit className="h-4 w-4" />
                               </Button>
-                              <Button variant="outline" size="sm">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => handleContactCustomer(order.id, 'Email')}
+                                title="Send Email"
+                              >
                                 <Mail className="h-4 w-4" />
                               </Button>
-                              <Button variant="outline" size="sm">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => handleContactCustomer(order.id, 'Phone')}
+                                title="Call Customer"
+                              >
                                 <Phone className="h-4 w-4" />
                               </Button>
+                              {order.status !== "Delivered" && (
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  onClick={() => handleMarkAsDelivered(order.id)}
+                                  title="Mark as Delivered"
+                                  className="text-green-600 hover:text-green-700"
+                                >
+                                  <CheckCircle className="h-4 w-4" />
+                                </Button>
+                              )}
                             </div>
                           </TableCell>
                         </TableRow>
@@ -951,7 +1076,11 @@ export default function Admin() {
                       Manage products with image upload and detailed tracking
                     </p>
                   </div>
-                  <Button onClick={handleAddProduct} className="btn-glow">
+                  <Button
+                    onClick={handleAddProduct}
+                    className="btn-glow"
+                    title="Add New Product"
+                  >
                     <Plus className="h-4 w-4 mr-2" />
                     Add Product
                   </Button>
@@ -1009,6 +1138,8 @@ export default function Admin() {
                             variant="outline"
                             size="sm"
                             className="flex-1"
+                            onClick={() => handleEditProduct(product)}
+                            title="Edit Product Details"
                           >
                             <Edit className="h-4 w-4 mr-1" />
                             Edit
@@ -1017,6 +1148,8 @@ export default function Admin() {
                             variant="outline"
                             size="sm"
                             className="flex-1"
+                            onClick={() => handleUploadImage(product.id)}
+                            title="Upload Product Image"
                           >
                             <Image className="h-4 w-4 mr-1" />
                             Image
@@ -1026,6 +1159,7 @@ export default function Admin() {
                             size="sm"
                             onClick={() => handleDeleteProduct(product.id)}
                             className="text-red-600 hover:text-red-700"
+                            title="Delete Product"
                           >
                             <Trash2 className="h-4 w-4" />
                           </Button>
@@ -1050,7 +1184,11 @@ export default function Admin() {
                         Manage farmer partnerships and track performance
                       </CardDescription>
                     </div>
-                    <Button className="btn-glow">
+                    <Button
+                      className="btn-glow"
+                      onClick={handleAddNewPartner}
+                      title="Add New Partner"
+                    >
                       <Plus className="h-4 w-4 mr-2" />
                       Add Partner
                     </Button>
@@ -1110,13 +1248,28 @@ export default function Admin() {
                           </TableCell>
                           <TableCell>
                             <div className="flex space-x-2">
-                              <Button variant="outline" size="sm">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => handleViewPartner(partner.id)}
+                                title="View Partner Details"
+                              >
                                 <Eye className="h-4 w-4" />
                               </Button>
-                              <Button variant="outline" size="sm">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => handleContactCustomer(partner.id.toString(), 'Phone')}
+                                title="Call Partner"
+                              >
                                 <Phone className="h-4 w-4" />
                               </Button>
-                              <Button variant="outline" size="sm">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => handleEditPartner(partner.id)}
+                                title="Edit Partner"
+                              >
                                 <Edit className="h-4 w-4" />
                               </Button>
                             </div>
