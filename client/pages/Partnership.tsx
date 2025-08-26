@@ -182,11 +182,11 @@ Benazir Yakta Partnership System
             <div className="max-w-7xl mx-auto text-center">
               <Badge
                 variant="secondary"
-                className="glass text-primary border-primary/20 mb-6 px-8 py-4 text-xl font-bold animate-pulse"
+                className="glass-readable text-readable-light border-primary/20 mb-6 px-8 py-4 text-xl font-bold animate-pulse"
               >
                 🤝 Join Our Growing Network
               </Badge>
-              <h1 className="text-display-lg text-high-contrast mb-6 text-glow">
+              <h1 className="text-display-lg text-readable-light mb-6 text-glow">
                 Partner with Afghanistan's <br />
                 <span className="text-primary-brand bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
                   Leading Export Company
